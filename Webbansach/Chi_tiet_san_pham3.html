@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết sản phẩm - Muốn - Một Tiểu thuyết</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <h1><a href="Trang_chu.html">Bookstore</a></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="Trang_chu.html">Trang chủ</a></li>
+                <li><a href="Danh_sach_san_pham.html">Sản phẩm</a></li>
+                <li><a href="Khuyen_mai.htmL">Khuyến mãi</a></li>
+                <li><a href="#">Liên hệ</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <button id="loginBtn"><a href="Dang_nhap.html">Đăng nhập</a></button>
+            |
+            <button id="signupBtn"><a href="Dang_ki.html">Đăng ký</a></button>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Tìm kiếm sách, tác giả...">
+            <button>Tìm kiếm</button>
+        </div>
+        <div class="gio-hang">
+            <button type="button" onclick="toggleCartDropdown()">Giỏ hàng <span class="arrow-down">▼</span></button>
+            
+            <!-- Dropdown list -->
+            <div class="cart-dropdown">
+                <ul class="cart-items">
+                    <li class="cart-item">
+                        <img src="https://cdn0.fahasa.com/media/catalog/product/7/6/76078_21_04_18_toi-khong-the-viet-tieu-thuyet.jpg" alt="Book 1" class="cart-item-image">
+                        <div class="cart-item-details">
+                            <span class="cart-item-name">Tôi không thể viết tiểu thuyết</span>
+                            <span class="cart-item-price">150,000 đ</span>
+                            <span class="cart-item-quantity">Số lượng: 1</span>
+                        </div>
+                    </li>
+                </ul>
+                <div class="cart-actions">
+                    <button onclick="window.location.href='Gio_hang.html'">Xem giỏ hàng</button>
+                    <button onclick="window.location.href='Thanh_toan.html'">Thanh toán</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="product-detail">
+        <div class="container2">
+            <!-- Product Images -->
+            <div class="product-images">
+                <img src="https://cdn0.fahasa.com/media/catalog/product/8/9/8935072953881.jpg" alt="Sản phẩm chính" class="main-image">
+            </div>
+            
+            <!-- Product Info -->
+            <div class="product-info">
+                <h2 class="product-title">Muốn - Một Tiểu Thuyết</h2>
+                <p class="product-author">Tác giả: Emma Cline</p>
+                <p class="product-price">
+                    <span class="original-price">350,000đ</span>
+                    <span class="discounted-price">70,000 đ</span>
+                </p>
+                <!-- Quantity Section -->
+                <div class="quantity">
+                    <label for="quantity">Số lượng:</label>
+                    <input type="number" id="quantity" name="quantity" min="1" value="1">
+                </div>
+                <button onclick="window.location.href='Gio_hang.html'" class="add-to-cart">Thêm vào giỏ hàng</button>
+                <button onclick="window.location.href='Thanh_toan.html' " style="background-color: rgb(111, 133, 95);" class="add-to-cart" >Mua ngay</button>
+                <div class="product-description">
+                    <h3>Mô tả sản phẩm</h3>
+                    <p><b>Muốn - Một Tiểu Thuyết</b></p>
+                    <p>TÔI 16 TUỔI VÀ SASHA 17 Tuổi, chúng tôi đi ra bãi biển vào ban đêm và không có ai ở đấy. Chúng tôi tổ chức một bữa tiệc ở nhà cô ấy, tôi bị té trầy đầu gối chân và được một cậu con trai cũng về mà tôi biết rõ cậu ta làm vậy chỉ để gây ấn tượng tốt với cô ấy.</p>
+
+                    <p>Chúng tôi tách ra khỏi mọi người khác. Có 10 người bị say rượu nhưng đã tỉnh lại rồi, sau khi đổ hết bia ra khỏi thùng, dọn sạch sẽ nhà của ba mẹ cô ấy, tiễn mọi người ra xe về nhà, chúng tôi mang rác ra vứt ở thùng rác bên bãi biển và chạy ra cát với đôi chân trần. Mặt biển yên ả, ánh trăng phản chiếu trên mặt nước, nhỏ xíu và sắc nét khi sóng biển cuộn lên; khi những cơn sóng lắng xuống, chúng ánh lên màu xanh với màu đen.</p>
+
+                    <p>Mỗi đứa chúng tôi khiêng một cái bao to đựng đầy lon, chai, ly nhựa rỗng, đồ ăn thừa từ hộp bánh mua từ cửa hàng mà chúng tôi đã nấu quá lửa với một tô mì ống khổng lồ mà chúng tôi trộn với tỏi, dầu, phô mai, cà chua cắt hạt lựu. Cả hai chúng tôi đều có mùi mồ hôi pha lẫn mùi bia....</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="related-products">
+        <div class="container">
+            <h3>Sản phẩm liên quan</h3>
+            <div class="product-list1">
+                <div class="product-item">
+                    <a href="Chi_tiet_san_pham.html"><img src="https://cdn0.fahasa.com/media/catalog/product/7/6/76078_21_04_18_toi-khong-the-viet-tieu-thuyet.jpg" alt="Sản phẩm liên quan 3"></a>
+                    <p class="related-title" style="color: #000000;">Tôi không thể viết tiểu thuyết</p>
+                    <p class="related-price">150,000 đ</p>
+                </div>
+                <div class="product-item">
+                    <a href="Chi_tiet_san_pham1.html"><img src="https://cdn0.fahasa.com/media/catalog/product/9/7/9786043651591_1.jpg" alt="Sản phẩm liên quan 1"></a>
+                    <p class="related-title" style="color: #000000;">Lén nhặt chuyện đời</p>
+                    <p class="related-price">130,000 đ</p>
+                </div>
+                <div class="product-item">
+                    <a href="Chi_tiet_san_pham2.html"><img src="https://cdn0.fahasa.com/media/catalog/product/9/7/9786044831398.jpg" alt="Sản phẩm liên quan 2"></a>
+                    <p class="related-title" style="color: #000000;" >Tiểu Thuyết Lịch Sử - Hồ Xuân Hương</p>
+                    <p class="related-price">90,000 đ</p>
+                </div>
+                <div class="product-item">
+                    <a href="Chi_tiet_san_pham4.html"><img src="https://cdn0.fahasa.com/media/catalog/product/8/9/8935210302168_1.jpg" alt="Sản phẩm liên quan 4"></a>
+                    <p class="related-title" style="color: #000000;">Hiệu sách cuối cùng ở LonDon</p>
+                    <p class="related-price">140,000 đ</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="js/Trang_chu.js"></script>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Về chúng tôi</h3>
+                <ul>
+                    <li><a href="#">Giới thiệu</a></li>
+                    <li><a href="#">Tin tức</a></li>
+                    <li><a href="#">Tuyển dụng</a></li>
+                    <li><a href="#">Chính sách bảo mật</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Hỗ trợ khách hàng</h3>
+                <ul>
+                    <li><a href="#">Hướng dẫn mua hàng</a></li>
+                    <li><a href="#">Phương thức thanh toán</a></li>
+                    <li><a href="#">Chính sách đổi trả</a></li>
+                    <li><a href="#">Liên hệ hỗ trợ</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Liên hệ</h3>
+                <p>Địa chỉ: 123 Đường ABC, Quận X, TP HCM</p>
+                <p>Email: support@bookstore.com</p>
+                <p>Hotline: 1900 1234</p>
+            </div>
+            <div class="footer-column">
+                <h3>Kết nối với chúng tôi</h3>
+                <div class="social-icons">
+                    <img src="https://store-images.s-microsoft.com/image/apps.30645.9007199266245907.cb06f1f9-9154-408e-b4ef-d19f2325893b.ac3b465e-4384-42a8-9142-901c0405e1bc" alt="Facebook">
+                    <img src="https://seeklogo.com/images/Y/youtube-square-logo-3F9D037665-seeklogo.com.png" alt="YouTube">
+                    <img src="https://store-images.s-microsoft.com/image/apps.43327.13510798887167234.cadff69d-8229-427b-a7da-21dbaf80bd81.79b8f512-1b22-45d6-9495-881485e3a87e" alt="Instagram">
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

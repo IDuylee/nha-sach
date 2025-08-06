@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>BookStore - Trang chủ</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1><a href="Trang_chu.html">Bookstore</a></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="Trang_chu.html">Trang chủ</a></li>
+                <li><a href="Danh_sach_san_pham.html">Sản phẩm</a></li>
+                <li><a href="Khuyen_mai.htmL">Khuyến mãi</a></li>
+                <li><a href="#">Liên hệ</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <button id="loginBtn"><a href="Dang_nhap.html">Đăng nhập</a></button>
+            |
+            <button id="signupBtn"><a href="Dang_ki.html">Đăng ký</a></button>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Tìm kiếm sách, tác giả...">
+            <button>Tìm kiếm</button>
+        </div>
+        <div class="gio-hang">
+            <button type="button" onclick="toggleCartDropdown()">Giỏ hàng <span class="arrow-down">▼</span></button>
+            
+            <!-- Dropdown list -->
+            <div class="cart-dropdown">
+                <ul class="cart-items">
+                    <li class="cart-item">
+                        <img src="https://cdn0.fahasa.com/media/catalog/product/7/6/76078_21_04_18_toi-khong-the-viet-tieu-thuyet.jpg" alt="Book 1" class="cart-item-image">
+                        <div class="cart-item-details">
+                            <span class="cart-item-name">Tôi không thể viết tiểu thuyết</span>
+                            <span class="cart-item-price">150,000 đ</span>
+                            <span class="cart-item-quantity">Số lượng: 1</span>
+                        </div>
+                    </li>
+                </ul>
+                <div class="cart-actions">
+                    <button onclick="window.location.href='Gio_hang.html'">Xem giỏ hàng</button>
+                    <button onclick="window.location.href='Thanh_toan.html'">Thanh toán</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="container">
+
+            <!-- Full-width images with number text -->
+            <div class="myslides">
+            <div class="numbertext">1 / 6</div>
+                <img src="https://cdn0.fahasa.com/media/magentothem/banner7/TrangCTT11_1124_Mainbanner_840x320.jpg" alt="">
+            </div>
+        
+            <div class="myslides">
+            <div class="numbertext">2 / 6</div>
+                <img src="https://cdn0.fahasa.com/media/magentothem/banner7/Diamond_1124_MCBooks_Resize_Slide_840x320.jpg" alt="">
+            </div>
+        
+            <div class="myslides">
+            <div class="numbertext">3 / 6</div>
+                <img src="https://cdn0.fahasa.com/media/magentothem/banner7/Diamond_1124_AlphaBooks_Resize_Slide_840x320.jpg" alt="">
+            </div>
+        
+            <div class="myslides">
+            <div class="numbertext">4 / 6</div>
+                <img src="https://cdn0.fahasa.com/media/magentothem/banner7/Partnership_T11_840x320.jpg" alt="">
+            </div>
+        <div class="myslides">
+            <div class="numbertext">5 / 6</div>
+                <img src="https://cdn0.fahasa.com/media/magentothem/banner7/TrangBlindBox_SlideBanner_840x320.png" alt="">
+            </div>
+        
+            <div class="myslides">
+            <div class="numbertext">6 / 6</div>
+                <img src="https://cdn0.fahasa.com/media/magentothem/banner7/butmau_SlideBanner_840x320.png" alt="">
+            </div>
+        
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+    </section>
+    <!-- Featured Books Section -->
+    <section class="featured-books">
+        <h2>Sách mới</h2>
+        <div class="book-list">
+            <div class="book-item">
+                <img src="https://cdn0.fahasa.com/media/catalog/product/9/7/9786044904917.jpg" alt="Book 1">
+                <h3>Kẻ ăn hồn</h3>
+                <p>150,000 đ</p>
+                <button onclick="window.location.href='Gio_hang.html'">Thêm vào giỏ</button>
+                <button onclick="window.location.href='Thanh_toan.html'" style="background-color: rgb(111, 133, 95);">Mua ngay</button>
+            </div>
+            <div class="book-item">
+                <img src="https://cdn0.fahasa.com/media/catalog/product/b/_/b_a-1-25-_-_m_1.jpg" alt="Book 3">
+                <h3>25 độ âm</h3>
+                <p>180,000 đ</p>
+                <button onclick="window.location.href='Gio_hang.html'">Thêm vào giỏ </button>
+                <button onclick="window.location.href='Thanh_toan.html'" style="background-color: rgb(111, 133, 95);">Mua ngay</button>
+            </div>
+            <div class="book-item">
+                <img src="https://cdn0.fahasa.com/media/catalog/product/9/7/9786043751871.jpg?_gl=1*1vnc97r*_gcl_aw*R0NMLjE3Mjk1MjQ2ODYuQ2owS0NRanc5OWU0QmhEaUFSSXNBSVNFN1BfVnNzZWhEMHplVFBGdzg5Z2FBMUhiNU51eHhPV0cwejZaZGc4b2F0cjM3SjdTcVBiSTNJNGFBb0VURUFMd193Y0I.*_gcl_au*NDAyMzg5NTIzLjE3Mjk1MjQ1MTM.*_ga*ODIxODM3OTM2LjE3Mjk1MjQ1MTM.*_ga_460L9JMC2G*MTcyOTUyNDUxMy4xLjEuMTcyOTUyNDc0Ny41OS4wLjkyNzEzMDEzNA.." alt="Book 4">
+                <h3>Ngủ cùng người chết</h3>
+                <p>180,000 đ</p>
+                <button onclick="window.location.href='Gio_hang.html'">Thêm vào giỏ </button>
+                <button onclick="window.location.href='Thanh_toan.html'" style="background-color: rgb(111, 133, 95);">Mua ngay</button>
+            </div>
+            <div class="book-item">
+                <img src="https://cdn0.fahasa.com/media/catalog/product/8/9/8935212358279.jpg" alt="Book 5">
+                <h3>Tết ở làng địa ngục</h3>
+                <p>180,000 đ</p>
+                <button onclick="window.location.href='Gio_hang.html'">Thêm vào giỏ</button>
+                <button onclick="window.location.href='Thanh_toan.html'" style="background-color: rgb(111, 133, 95);">Mua ngay</button>
+            </div>
+            <div class="book-item">
+                <img src="https://cdn0.fahasa.com/media/catalog/product/t/_/t_m-l_-h_c-t_i-ph_m-1---b_a-1.jpg" alt="Book 2">
+                <h3>Tâm lý học tội phạm</h3>
+                <p>120,000 đ</p>
+                <button onclick="window.location.href='Gio_hang.html'">Thêm vào giỏ</button>
+                <button onclick="window.location.href='Thanh_toan.html'" style="background-color: rgb(111, 133, 95);">Mua ngay</button>
+            </div>
+        </div>
+    </section>
+    <section class="featured-books">
+        <h2>Sách nổi bật</h2>
+        <div class="book-list">
+            <div class="book-item">
+                <img src="https://cdn0.fahasa.com/media/catalog/product/8/9/8935278605546.jpg" alt="Book 1">
+                <h3>Mọi thứ chỉ mới bắt đầu</h3>
+                <p>150,000 đ</p>
+                <button onclick="window.location.href='Gio_hang.html'">Thêm vào giỏ</button>
+                <button onclick="window.location.href='Thanh_toan.html'" style="background-color: rgb(111, 133, 95);">Mua ngay</button>
+            </div>
+            <div class="book-item">
+                <img src="https://cdn0.fahasa.com/media/catalog/product/9/7/9786043440287.jpg" alt="Book 3">
+                <h3>Tư duy ngược</h3>
+                <p>180,000 đ</p>
+                <button onclick="window.location.href='Gio_hang.html'">Thêm vào giỏ </button>
+                <button onclick="window.location.href='Thanh_toan.html'" style="background-color: rgb(111, 133, 95);">Mua ngay</button>
+            </div>
+            <div class="book-item">
+                <img src="https://cdn0.fahasa.com/media/catalog/product/9/7/9786044742250.jpg" alt="Book 4">
+                <h3>Tư duy mở</h3>
+                <p>180,000 đ</p>
+                <button onclick="window.location.href='Gio_hang.html'">Thêm vào giỏ </button>
+                <button onclick="window.location.href='Thanh_toan.html'" style="background-color: rgb(111, 133, 95);">Mua ngay</button>
+            </div>
+            <div class="book-item">
+                <img src="https://cdn0.fahasa.com/media/catalog/product/8/9/8936066694469.jpg" alt="Book 5">
+                <h3>Nói chuyện là bản năng</h3>
+                <p>180,000 đ</p>
+                <button onclick="window.location.href='Gio_hang.html'">Thêm vào giỏ</button>
+                <button onclick="window.location.href='Thanh_toan.html'" style="background-color: rgb(111, 133, 95);">Mua ngay</button>
+            </div>
+            <div class="book-item">
+                <img src="https://cdn0.fahasa.com/media/catalog/product/z/4/z4118763446785_cf4bc22d353b065bbb37e686de1f9207.jpg" alt="Book 2">
+                <h3>Hiểu về trái tim</h3>
+                <p>120,000 đ</p>
+                <button onclick="window.location.href='Gio_hang.html'">Thêm vào giỏ</button>
+                <button onclick="window.location.href='Thanh_toan.html'" style="background-color: rgb(111, 133, 95);">Mua ngay</button>
+            </div>
+        </div>
+    </section>
+    <section class="featured-books">
+        <h2>Sách bán chạy</h2>
+        <div class="book-list">
+            <div class="book-item">
+                <img src="https://cdn0.fahasa.com/media/catalog/product/i/m/image_195509_1_5358.jpg" alt="Book 1">
+                <h3>Một đời như kẻ tìm đường</h3>
+                <p>150,000 đ</p>
+                <button onclick="window.location.href='Gio_hang.html'">Thêm vào giỏ</button>
+                <button onclick="window.location.href='Thanh_toan.html'" style="background-color: rgb(111, 133, 95);">Mua ngay</button>
+            </div>
+            <div class="book-item">
+                <img src="https://cdn0.fahasa.com/media/catalog/product/n/o/nong-gian-la-ban-nang-1_1.jpg" alt="Book 3">
+                <h3>Nóng giận là bản năng</h3>
+                <p>180,000 đ</p>
+                <button onclick="window.location.href='Gio_hang.html'">Thêm vào giỏ </button>
+                <button onclick="window.location.href='Thanh_toan.html'" style="background-color: rgb(111, 133, 95);">Mua ngay</button>
+            </div>
+            <div class="book-item">
+                <img src="https://cdn0.fahasa.com/media/catalog/product/8/9/8935086856000.jpg" alt="Book 4">
+                <h3>Bạn đang nghịch gì với đời</h3>
+                <p>180,000 đ</p>
+                <button onclick="window.location.href='Gio_hang.html'">Thêm vào giỏ </button>
+                <button onclick="window.location.href='Thanh_toan.html'" style="background-color: rgb(111, 133, 95);">Mua ngay</button>
+            </div>
+            <div class="book-item">
+                <img src="https://cdn0.fahasa.com/media/catalog/product/d/n/dntttttuntitled.jpg" alt="Book 5">
+                <h3>Đắc nhân tâm</h3>
+                <p>180,000 đ</p>
+                <button onclick="window.location.href='Gio_hang.html'">Thêm vào giỏ</button>
+                <button onclick="window.location.href='Thanh_toan.html'" style="background-color: rgb(111, 133, 95);">Mua ngay</button>
+            </div>
+            <div class="book-item">
+                <img src="https://cdn0.fahasa.com/media/catalog/product/p/h/ph_t-h_nh-_nh-lu_t-murphybia-1.jpg" alt="Book 2">
+                <h3>Định luật Murphy</h3>
+                <p>120,000 đ</p>
+                <button onclick="window.location.href='Gio_hang.html'">Thêm vào giỏ</button>
+                <button onclick="window.location.href='Thanh_toan.html'" style="background-color: rgb(111, 133, 95);">Mua ngay</button>
+            </div>
+        </div>
+    </section>
+    <script src="js/Trang_chu.js"></script>
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Về chúng tôi</h3>
+                <ul>
+                    <li><a href="#">Giới thiệu</a></li>
+                    <li><a href="#">Tin tức</a></li>
+                    <li><a href="#">Tuyển dụng</a></li>
+                    <li><a href="#">Chính sách bảo mật</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Hỗ trợ khách hàng</h3>
+                <ul>
+                    <li><a href="#">Hướng dẫn mua hàng</a></li>
+                    <li><a href="#">Phương thức thanh toán</a></li>
+                    <li><a href="#">Chính sách đổi trả</a></li>
+                    <li><a href="#">Liên hệ hỗ trợ</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Liên hệ</h3>
+                <p>Địa chỉ: 123 Đường ABC, Quận X, TP HCM</p>
+                <p>Email: support@bookstore.com</p>
+                <p>Hotline: 1900 1234</p>
+            </div>
+            <div class="footer-column">
+                <h3>Kết nối với chúng tôi</h3>
+                <div class="social-icons">
+                    <img src="https://store-images.s-microsoft.com/image/apps.30645.9007199266245907.cb06f1f9-9154-408e-b4ef-d19f2325893b.ac3b465e-4384-42a8-9142-901c0405e1bc" alt="Facebook">
+                    <img src="https://seeklogo.com/images/Y/youtube-square-logo-3F9D037665-seeklogo.com.png" alt="YouTube">
+                    <img src="https://store-images.s-microsoft.com/image/apps.43327.13510798887167234.cadff69d-8229-427b-a7da-21dbaf80bd81.79b8f512-1b22-45d6-9495-881485e3a87e" alt="Instagram">
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

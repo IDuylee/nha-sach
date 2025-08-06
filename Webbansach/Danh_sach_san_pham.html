@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách Sản phẩm - BookStore</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <h1><a href="Trang_chu.html">Bookstore</a></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="Trang_chu.html">Trang chủ</a></li>
+                <li><a href="Danh_sach_san_pham.html">Sản phẩm</a></li>
+                <li><a href="Khuyen_mai.htmL">Khuyến mãi</a></li>
+                <li><a href="#">Liên hệ</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <button id="loginBtn"><a href="Dang_nhap.html">Đăng nhập</a></button>
+            |
+            <button id="signupBtn"><a href="Dang_ki.html">Đăng ký</a></button>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Tìm kiếm sách, tác giả...">
+            <button>Tìm kiếm</button>
+        </div>
+        <div class="gio-hang">
+            <button type="button" onclick="toggleCartDropdown()">Giỏ hàng <span class="arrow-down">▼</span></button>
+            
+            <!-- Dropdown list -->
+            <div class="cart-dropdown">
+                <ul class="cart-items">
+                    <li class="cart-item">
+                        <img src="https://cdn0.fahasa.com/media/catalog/product/7/6/76078_21_04_18_toi-khong-the-viet-tieu-thuyet.jpg" alt="Book 1" class="cart-item-image">
+                        <div class="cart-item-details">
+                            <span class="cart-item-name">Tôi không thể viết tiểu thuyết</span>
+                            <span class="cart-item-price">150,000 đ</span>
+                            <span class="cart-item-quantity">Số lượng: 1</span>
+                        </div>
+                    </li>
+                </ul>
+                <div class="cart-actions">
+                    <button onclick="window.location.href='Gio_hang.html'">Xem giỏ hàng</button>
+                    <button onclick="window.location.href='Thanh_toan.html'">Thanh toán</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Phần chính -->
+    <div class="container1">
+        <!-- Phần bên trái: Danh sách thể loại -->
+        <aside class="category-list1">
+            <h3>Thể loại sách</h3>
+            <ul>
+                <li onclick="filterCategory('Fiction')">Tiểu thuyết</li>
+                <li onclick="filterCategory('Science')">Khoa học</li>
+                <li onclick="filterCategory('History')">Lịch sử</li>
+                <li onclick="filterCategory('Children')">Trẻ em</li>
+                <li onclick="filterCategory('Romance')">Ngôn tình</li>
+                <li onclick="filterCategory('Horror')">Kinh dị</li>
+                <li onclick="filterCategory('Education')">Giáo dục</li>
+                <li onclick="filterCategory('Biography')">Tiểu sử</li>
+            </ul>
+        </aside>
+
+        <!-- Phần chính: Danh sách sản phẩm -->
+        <section class="product-content">
+            <!-- Phần lọc theo giá -->
+            <div class="filter">
+                <label for="minPrice">Giá từ:</label>
+                <input type="number" id="minPrice" placeholder="0">
+                <label for="maxPrice">Đến:</label>
+                <input type="number" id="maxPrice" placeholder="200000">
+                <button onclick="filterByPrice()">Lọc theo giá</button>
+            </div>
+
+            <div class="product-grid">
+                <!-- Sản phẩm thuộc thể loại Tiểu thuyết -->
+                <div class="product-item" data-category="Fiction">
+                    <a href="Chi_tiet_san_pham.html"><img src="https://cdn0.fahasa.com/media/catalog/product/7/6/76078_21_04_18_toi-khong-the-viet-tieu-thuyet.jpg" alt="Tôi không thể viết tiểu thuyết"></a>
+                    <h3>Tôi không thể viết tiểu thuyết</h3>
+                    <p>150,000 đ</p>
+                    <button onclick="window.location.href='Gio_hang.html'">Thêm vào giỏ </button>
+                    <button onclick="window.location.href='Thanh_toan.html'" style="background-color: rgb(111, 133, 95);">Mua ngay</button>
+                </div>
+                <div class="product-item" data-category="Fiction">
+                    <a href="Chi_tiet_san_pham1.html"><img src="https://cdn0.fahasa.com/media/catalog/product/9/7/9786043651591_1.jpg" alt="Lén nhặt chuyện đời"></a>
+                    <h3>Lén nhặt chuyện đời</h3>
+                    <p>130,000 đ</p>
+                    <button onclick="window.location.href='Gio_hang.html'">Thêm vào giỏ </button>
+                    <button onclick="window.location.href='Thanh_toan.html'" style="background-color: rgb(111, 133, 95);">Mua ngay</button>
+                </div>
+                <div class="product-item" data-category="Fiction">
+                    <a href="Chi_tiet_san_pham2.html"><img src="https://cdn0.fahasa.com/media/catalog/product/9/7/9786044831398.jpg" alt="Tiểu thuyết lịch sử _ Hồ Xuân Hương"></a>
+                    <h3>Tiểu thuyết lịch sử _ Hồ Xuân Hương</h3>
+                    <p>90,000 đ</p>
+                    <button onclick="window.location.href='Gio_hang.html'">Thêm vào giỏ </button>
+                    <button onclick="window.location.href='Thanh_toan.html'" style="background-color: rgb(111, 133, 95);">Mua ngay</button>
+                </div>
+
+                <div class="product-item" data-category="Fiction">
+                    <a href="Chi_tiet_san_pham3.html"><img src="https://cdn0.fahasa.com/media/catalog/product/8/9/8935072953881.jpg" alt="Muốn - Một Tiểu thuyết"></a>
+                    <h3>Muốn - Một Tiểu thuyết</h3>
+                    <p>70,000 đ</p>
+                    <button onclick="window.location.href='Gio_hang.html'">Thêm vào giỏ </button>
+                    <button onclick="window.location.href='Thanh_toan.html'" style="background-color: rgb(111, 133, 95);">Mua ngay</button>
+                </div>
+                <div class="product-item" data-category="Fiction">
+                    <a href="Chi_tiet_san_pham4.html"><img src="https://cdn0.fahasa.com/media/catalog/product/8/9/8935210302168_1.jpg" alt="Hiệu sách cuối cùng ở LonDon - Tiểu thuyết về chiến tranh"></a>
+                    <h3>Hiệu sách cuối cùng ở LonDon</h3>
+                    <p>140,000 đ</p>
+                    <button onclick="window.location.href='Gio_hang.html'">Thêm vào giỏ </button>
+                    <button onclick="window.location.href='Thanh_toan.html'" style="background-color: rgb(111, 133, 95);">Mua ngay</button>
+                </div>
+                <!-- Sản phẩm thuộc thể loại Khoa học -->
+                <div class="product-item" data-category="Science">
+                    <img src="https://cdn0.fahasa.com/media/catalog/product/i/m/image_195509_1_31088.jpg" alt="Khoa học khám phá - Một đêm">
+                    <h3>Khoa học khám phá - Một đêm</h3>
+                    <p>250,000 đ</p>
+                    <button onclick="window.location.href='Gio_hang.html'">Thêm vào giỏ </button>
+                    <button onclick="window.location.href='Thanh_toan.html'" style="background-color: rgb(111, 133, 95);">Mua ngay</button>
+                </div>
+                <div class="product-item" data-category="Science">
+                    <img src="https://cdn0.fahasa.com/media/catalog/product/i/m/image_195509_1_36331.jpg" alt="Bên lề Khoa học">
+                    <h3>Bên lề Khoa học</h3>
+                    <p>200,000 đ</p>
+                    <button onclick="window.location.href='Gio_hang.html'">Thêm vào giỏ </button>
+                    <button onclick="window.location.href='Thanh_toan.html'" style="background-color: rgb(111, 133, 95);">Mua ngay</button>
+                </div>
+
+                <!-- Sản phẩm thuộc thể loại Lịch sử -->
+                <div class="product-item" data-category="History">
+                    <img src="https://cdn0.fahasa.com/media/catalog/product/8/9/8935246932643.jpg" alt="Lịch sử thế giới">
+                    <h3>Lịch sử thế giới</h3>
+                    <p>180,000 đ</p>
+                    <button onclick="window.location.href='Gio_hang.html'">Thêm vào giỏ </button>
+                    <button onclick="window.location.href='Thanh_toan.html'" style="background-color: rgb(111, 133, 95);">Mua ngay</button>
+                </div>
+                <div class="product-item" data-category="History">
+                    <img src="https://cdn0.fahasa.com/media/catalog/product/8/9/8934974199892.jpg" alt="Lịch sử y học">
+                    <h3>Lịch sử y học</h3>
+                    <p>320,000 đ</p>
+                    <button onclick="window.location.href='Gio_hang.html'">Thêm vào giỏ </button>
+                    <button onclick="window.location.href='Thanh_toan.html'" style="background-color: rgb(111, 133, 95);">Mua ngay</button>
+                </div>
+            <!-- Sản phẩm thuộc thể loại Trẻ em -->
+            <div class="product-item" data-category="Children">
+                <img src="https://cdn0.fahasa.com/media/catalog/product/8/9/8935210289629.jpg" alt="Nghệ thuật kể chuyện cho trẻ em">
+                <h3>Nghệ thuật kể chuyện cho trẻ em</h3>
+                <p>180,000 đ</p>
+                <button onclick="window.location.href='Gio_hang.html'">Thêm vào giỏ </button>
+                <button onclick="window.location.href='Thanh_toan.html'" style="background-color: rgb(111, 133, 95);">Mua ngay</button>
+            </div>
+            <div class="product-item" data-category="Children">
+                <img src="https://cdn0.fahasa.com/media/catalog/product/z/3/z3464650018806_8228148eb4bbc996c3e6d73d6f056667.jpg" alt="Bách khoa cho trẻ em">
+                <h3>Bách khoa cho trẻ em</h3>
+                <p>180,000 đ</p>
+                <button onclick="window.location.href='Gio_hang.html'">Thêm vào giỏ </button>
+                <button onclick="window.location.href='Thanh_toan.html'" style="background-color: rgb(111, 133, 95);">Mua ngay</button>
+            </div>
+            <!-- Sản phẩm thuộc thể loại Ngôn tình -->
+             <div class="product-item" data-category="Romance">
+                <img src="https://cdn0.fahasa.com/media/catalog/product/8/9/8935095614783.jpg" alt="Tình đầu trong vũ trụ">
+                <h3>Tình đầu trong vũ trụ</h3>
+                <p>180,000 đ</p>
+                <button onclick="window.location.href='Gio_hang.html'">Thêm vào giỏ </button>
+                <button onclick="window.location.href='Thanh_toan.html'" style="background-color: rgb(111, 133, 95);">Mua ngay</button>
+             </div>
+             <div class="product-item" data-category="Romance">
+                <img src="https://cdn0.fahasa.com/media/catalog/product/9/7/9786044910208.jpg" alt="Phía sau tình yêu">
+                <h3>Phía sau tình yêu</h3>
+                <p>270,000 đ</p>
+                <button onclick="window.location.href='Gio_hang.html'">Thêm vào giỏ </button>
+                <button onclick="window.location.href='Thanh_toan.html'" style="background-color: rgb(111, 133, 95);">Mua ngay</button>
+             </div>
+
+            
+             <!-- Sản phẩm thuộc thể loại Kinh dị -->
+             <div class="product-item" data-category="Horror">
+                <img src="https://cdn0.fahasa.com/media/catalog/product/8/9/8935244877205.jpg" alt="Truyện kinh dị Việt Nam - Vàng và Máu">
+                <h3>Truyện kinh dị Việt Nam - Vàng và Máu</h3>
+                <p>180,000 đ</p>
+                <button onclick="window.location.href='Gio_hang.html'">Thêm vào giỏ </button>
+                <button onclick="window.location.href='Thanh_toan.html'" style="background-color: rgb(111, 133, 95);">Mua ngay</button>
+             </div>
+             <div class="product-item" data-category="Horror">
+                <img src="https://cdn0.fahasa.com/media/catalog/product/t/b/tbph---_ng-linh-d_-truy_n600.jpg" alt="Dị chủng 2 - Tàn thế">
+                <h3>Dị chủng 2 - Tàn thế</h3>
+                <p>100,000 đ</p>
+                <button onclick="window.location.href='Gio_hang.html'">Thêm vào giỏ </button>
+                <button onclick="window.location.href='Thanh_toan.html'" style="background-color: rgb(111, 133, 95);">Mua ngay</button>
+             </div>
+            
+
+             <!-- Sản phẩm thuộc thể loại Giáo dục -->
+             <div class="product-item" data-category="Education">
+                <img src="https://cdn0.fahasa.com/media/catalog/product/9/7/9786043144635.jpg" alt="Thay vì Giáo dục">
+                <h3>Thay vì Giáo dục</h3>
+                <p>70,000 đ</p>
+                <button onclick="window.location.href='Gio_hang.html'">Thêm vào giỏ </button>
+                <button onclick="window.location.href='Thanh_toan.html'" style="background-color: rgb(111, 133, 95);">Mua ngay</button>
+             </div>
+             <div class="product-item" data-category="Education">
+                <img src="https://cdn0.fahasa.com/media/catalog/product/i/m/image_190898.jpg" alt="Gia đình Giáo dục">
+                <h3>Gia đình Giáo dục</h3>
+                <p>80,000 đ</p>
+                <button onclick="window.location.href='Gio_hang.html'">Thêm vào giỏ </button>
+                <button onclick="window.location.href='Thanh_toan.html'" style="background-color: rgb(111, 133, 95);">Mua ngay</button>
+             </div>
+
+             <!-- Sản phẩm thuộc thể loại Tiểu sử -->
+             <div class="product-item" data-category="Biography">
+                <img src="https://cdn0.fahasa.com/media/catalog/product/e/l/elonmusk_1.jpg" alt="Tiểu sử Elon Musk">
+                <h3>Tiểu sử Elon Musk</h3>
+                <p>99,000 đ</p>
+                <button onclick="window.location.href='Gio_hang.html'">Thêm vào giỏ </button>
+                <button onclick="window.location.href='Thanh_toan.html'" style="background-color: rgb(111, 133, 95);">Mua ngay</button>
+             </div>
+             <div class="product-item" data-category="Biography">
+                <img src="https://cdn0.fahasa.com/media/catalog/product/i/m/image_195509_1_40814_1.jpg" alt="Tiểu sử Steve Jobs">
+                <h3>Tiểu sử Steve Jobs</h3>
+                <p>150,000 đ</p>
+                <button onclick="window.location.href='Gio_hang.html'">Thêm vào giỏ </button>
+                <button onclick="window.location.href='Thanh_toan.html'" style="background-color: rgb(111, 133, 95);">Mua ngay</button>
+             </div>
+                <!-- Thêm các sản phẩm khác -->
+            </div>
+        </section>
+    </div>
+    <script src="js/San_pham.js"></script>
+    <script src="js/Trang_chu.js"></script>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Về chúng tôi</h3>
+                <ul>
+                    <li><a href="#">Giới thiệu</a></li>
+                    <li><a href="#">Tin tức</a></li>
+                    <li><a href="#">Tuyển dụng</a></li>
+                    <li><a href="#">Chính sách bảo mật</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Hỗ trợ khách hàng</h3>
+                <ul>
+                    <li><a href="#">Hướng dẫn mua hàng</a></li>
+                    <li><a href="#">Phương thức thanh toán</a></li>
+                    <li><a href="#">Chính sách đổi trả</a></li>
+                    <li><a href="#">Liên hệ hỗ trợ</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Liên hệ</h3>
+                <p>Địa chỉ: 123 Đường ABC, Quận X, TP HCM</p>
+                <p>Email: support@bookstore.com</p>
+                <p>Hotline: 1900 1234</p>
+            </div>
+            <div class="footer-column">
+                <h3>Kết nối với chúng tôi</h3>
+                <div class="social-icons">
+                    <img src="https://store-images.s-microsoft.com/image/apps.30645.9007199266245907.cb06f1f9-9154-408e-b4ef-d19f2325893b.ac3b465e-4384-42a8-9142-901c0405e1bc" alt="Facebook">
+                    <img src="https://seeklogo.com/images/Y/youtube-square-logo-3F9D037665-seeklogo.com.png" alt="YouTube">
+                    <img src="https://store-images.s-microsoft.com/image/apps.43327.13510798887167234.cadff69d-8229-427b-a7da-21dbaf80bd81.79b8f512-1b22-45d6-9495-881485e3a87e" alt="Instagram">
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
